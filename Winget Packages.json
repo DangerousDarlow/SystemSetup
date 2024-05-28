@@ -2,97 +2,9 @@
   "export_version": 2,
   "packages": [
     {
-      "Id": "ScooterSoftware.BeyondCompare4",
-      "Name": "Beyond Compare 4",
-      "Version": "4.4.7.28397",
-      "Source": "winget",
-      "ManagerName": "Winget",
-      "InstallationOptions": {
-        "SkipHashCheck": false,
-        "InteractiveInstallation": false,
-        "RunAsAdministrator": false,
-        "Architecture": "",
-        "InstallationScope": "",
-        "CustomParameters": [],
-        "PreRelease": false,
-        "CustomInstallLocation": "",
-        "Version": ""
-      },
-      "Updates": {
-        "UpdatesIgnored": false,
-        "IgnoredVersion": ""
-      }
-    },
-    {
-      "Id": "Python.Python.3.12",
-      "Name": "Python 3.12",
-      "Version": "3.12.3",
-      "Source": "winget",
-      "ManagerName": "Winget",
-      "InstallationOptions": {
-        "SkipHashCheck": false,
-        "InteractiveInstallation": false,
-        "RunAsAdministrator": false,
-        "Architecture": "",
-        "InstallationScope": "",
-        "CustomParameters": [],
-        "PreRelease": false,
-        "CustomInstallLocation": "",
-        "Version": ""
-      },
-      "Updates": {
-        "UpdatesIgnored": false,
-        "IgnoredVersion": ""
-      }
-    },
-    {
-      "Id": "Microsoft.VisualStudioCode",
-      "Name": "Microsoft Visual Studio Code",
-      "Version": "1.89.1",
-      "Source": "winget",
-      "ManagerName": "Winget",
-      "InstallationOptions": {
-        "SkipHashCheck": false,
-        "InteractiveInstallation": false,
-        "RunAsAdministrator": false,
-        "Architecture": "",
-        "InstallationScope": "",
-        "CustomParameters": [],
-        "PreRelease": false,
-        "CustomInstallLocation": "",
-        "Version": ""
-      },
-      "Updates": {
-        "UpdatesIgnored": false,
-        "IgnoredVersion": ""
-      }
-    },
-    {
-      "Id": "Zoom.Zoom",
-      "Name": "Zoom Workplace",
-      "Version": "6.0.38135",
-      "Source": "winget",
-      "ManagerName": "Winget",
-      "InstallationOptions": {
-        "SkipHashCheck": false,
-        "InteractiveInstallation": false,
-        "RunAsAdministrator": false,
-        "Architecture": "",
-        "InstallationScope": "",
-        "CustomParameters": [],
-        "PreRelease": false,
-        "CustomInstallLocation": "",
-        "Version": ""
-      },
-      "Updates": {
-        "UpdatesIgnored": false,
-        "IgnoredVersion": ""
-      }
-    },
-    {
       "Id": "7zip.7zip",
-      "Name": "7-Zip 23.01 (x64 edition)",
-      "Version": "23.01.00.0",
+      "Name": "7-Zip 24.05 (x64 edition)",
+      "Version": "24.05.00.0",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -134,9 +46,31 @@
       }
     },
     {
+      "Id": "ScooterSoftware.BeyondCompare4",
+      "Name": "Beyond Compare 4.4.7",
+      "Version": "4.4.7.28397",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
       "Id": "JetBrains.DataGrip",
-      "Name": "DataGrip 2024.1.2",
-      "Version": "2024.1.2",
+      "Name": "DataGrip 2024.1.3",
+      "Version": "2024.1.3",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -204,7 +138,7 @@
     {
       "Id": "Git.Git",
       "Name": "Git",
-      "Version": "2.45.0",
+      "Version": "2.45.1",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -228,7 +162,7 @@
     {
       "Id": "Google.Chrome",
       "Name": "Google Chrome",
-      "Version": "124.0.6367.202",
+      "Version": "125.0.6422.113",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -250,7 +184,7 @@
     {
       "Id": "Google.GoogleDrive",
       "Name": "Google Drive",
-      "Version": "90.0.3.0",
+      "Version": "91.0.2.0",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -295,8 +229,8 @@
     },
     {
       "Id": "Microsoft.DotNet.Runtime.8",
-      "Name": "Microsoft .NET Runtime - 8.0.4 (x64)",
-      "Version": "8.0.4",
+      "Name": "Microsoft .NET Runtime - 8.0.5 (x64)",
+      "Version": "8.0.5",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -319,6 +253,28 @@
       "Id": "Microsoft.DotNet.SDK.8",
       "Name": "Microsoft .NET SDK 8.0.204 (x64)",
       "Version": "8.0.204",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": true,
+        "IgnoredVersion": "*"
+      }
+    },
+    {
+      "Id": "Microsoft.VisualStudioCode",
+      "Name": "Microsoft Visual Studio Code (User)",
+      "Version": "1.89.1",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -364,7 +320,51 @@
     {
       "Id": "Notepad\u002B\u002B.Notepad\u002B\u002B",
       "Name": "Notepad\u002B\u002B (64-bit x64)",
-      "Version": "8.6.5",
+      "Version": "8.6.7",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
+      "Id": "Nvidia.GeForceExperience",
+      "Name": "NVIDIA GeForce Experience 3.28.0.412",
+      "Version": "3.28.0.412",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
+      "Id": "Nvidia.PhysX",
+      "Name": "NVIDIA PhysX System Software 9.21.0713",
+      "Version": "9.21.0713",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -452,6 +452,50 @@
       }
     },
     {
+      "Id": "Postman.Postman",
+      "Name": "Postman",
+      "Version": "11.1.14",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
+      "Id": "Python.Python.3.12",
+      "Name": "Python 3.12.3 (64-bit)",
+      "Version": "3.12.3",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
       "Id": "Valve.Steam",
       "Name": "Steam",
       "Version": "2.10.91.91",
@@ -474,9 +518,75 @@
       }
     },
     {
+      "Id": "Canonical.Ubuntu.2204",
+      "Name": "Ubuntu",
+      "Version": "2204.3.49.0",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
       "Id": "JetBrains.WebStorm",
-      "Name": "WebStorm 2024.1.2",
-      "Version": "2024.1.2",
+      "Name": "WebStorm 2024.1.3",
+      "Version": "2024.1.3",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
+      "Id": "Microsoft.DotNet.SDK.8",
+      "Name": "Microsoft .NET SDK 8.0.204 (x64)",
+      "Version": "8.0.204",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": true,
+        "IgnoredVersion": "*"
+      }
+    },
+    {
+      "Id": "Zoom.Zoom",
+      "Name": "Zoom Workplace (64-bit)",
+      "Version": "6.0.39959",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
