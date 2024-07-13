@@ -517,7 +517,7 @@
         "IgnoredVersion": ""
       }
     },
-	{
+    {
       "Id": "Python.Python.3.12",
       "Name": "Python 3.12",
       "Version": "3.12.4",
