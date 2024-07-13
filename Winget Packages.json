@@ -3,8 +3,8 @@
   "packages": [
     {
       "Id": "7zip.7zip",
-      "Name": "7-Zip 24.05 (x64 edition)",
-      "Version": "24.05.00.0",
+      "Name": "7-Zip",
+      "Version": "24.07.00.0",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -24,10 +24,32 @@
       }
     },
     {
-      "Id": "XPDP264X2DK8NB",
+      "Id": "Adobe.CreativeCloud",
       "Name": "Adobe Creative Cloud",
-      "Version": "6.2.0.554",
-      "Source": "msstore",
+      "Version": "6.3.0.207",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
+      "Id": "Microsoft.AppInstaller",
+      "Name": "App Installer",
+      "Version": "1.23.1911.0",
+      "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
         "SkipHashCheck": false,
@@ -47,7 +69,7 @@
     },
     {
       "Id": "ScooterSoftware.BeyondCompare4",
-      "Name": "Beyond Compare 4.4.7",
+      "Name": "Beyond Compare 4",
       "Version": "4.4.7.28397",
       "Source": "winget",
       "ManagerName": "Winget",
@@ -69,8 +91,8 @@
     },
     {
       "Id": "JetBrains.DataGrip",
-      "Name": "DataGrip 2024.1.3",
-      "Version": "2024.1.3",
+      "Name": "DataGrip",
+      "Version": "2024.1.4",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -92,7 +114,7 @@
     {
       "Id": "Discord.Discord",
       "Name": "Discord",
-      "Version": "1.0.9144",
+      "Version": "1.0.9152",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -116,7 +138,7 @@
     {
       "Id": "Docker.DockerDesktop",
       "Name": "Docker Desktop",
-      "Version": "4.30.0",
+      "Version": "4.32.0",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -138,7 +160,7 @@
     {
       "Id": "Git.Git",
       "Name": "Git",
-      "Version": "2.45.1",
+      "Version": "2.45.2",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -162,7 +184,7 @@
     {
       "Id": "Google.Chrome",
       "Name": "Google Chrome",
-      "Version": "125.0.6422.113",
+      "Version": "126.0.6478.127",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -184,7 +206,7 @@
     {
       "Id": "Google.GoogleDrive",
       "Name": "Google Drive",
-      "Version": "91.0.2.0",
+      "Version": "93.0.1.0",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -206,9 +228,31 @@
       }
     },
     {
+      "Id": "Inkscape.Inkscape",
+      "Name": "Inkscape",
+      "Version": "1.3.2",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
       "Id": "JetBrains.Rider",
-      "Name": "JetBrains Rider 2024.1.2",
-      "Version": "2024.1.2",
+      "Name": "JetBrains Rider",
+      "Version": "2024.1.4",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -229,8 +273,8 @@
     },
     {
       "Id": "Microsoft.DotNet.Runtime.8",
-      "Name": "Microsoft .NET Runtime - 8.0.5 (x64)",
-      "Version": "8.0.5",
+      "Name": "Microsoft .NET Runtime 8.0",
+      "Version": "8.0.6",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -251,7 +295,7 @@
     },
     {
       "Id": "Microsoft.DotNet.SDK.8",
-      "Name": "Microsoft .NET SDK 8.0.204 (x64)",
+      "Name": "Microsoft .NET SDK 8.0",
       "Version": "8.0.204",
       "Source": "winget",
       "ManagerName": "Winget",
@@ -272,9 +316,31 @@
       }
     },
     {
+      "Id": "Microsoft.Edge",
+      "Name": "Microsoft Edge",
+      "Version": "126.0.2592.102",
+      "Source": "winget",
+      "ManagerName": "Winget",
+      "InstallationOptions": {
+        "SkipHashCheck": false,
+        "InteractiveInstallation": false,
+        "RunAsAdministrator": false,
+        "Architecture": "",
+        "InstallationScope": "",
+        "CustomParameters": [],
+        "PreRelease": false,
+        "CustomInstallLocation": "",
+        "Version": ""
+      },
+      "Updates": {
+        "UpdatesIgnored": false,
+        "IgnoredVersion": ""
+      }
+    },
+    {
       "Id": "Microsoft.VisualStudioCode",
-      "Name": "Microsoft Visual Studio Code (User)",
-      "Version": "1.89.1",
+      "Name": "Microsoft Visual Studio Code",
+      "Version": "1.91.0",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -296,7 +362,7 @@
     {
       "Id": "NordSecurity.NordPass",
       "Name": "NordPass",
-      "Version": "5.15.28",
+      "Version": "5.18.7",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -319,52 +385,8 @@
     },
     {
       "Id": "Notepad\u002B\u002B.Notepad\u002B\u002B",
-      "Name": "Notepad\u002B\u002B (64-bit x64)",
-      "Version": "8.6.7",
-      "Source": "winget",
-      "ManagerName": "Winget",
-      "InstallationOptions": {
-        "SkipHashCheck": false,
-        "InteractiveInstallation": false,
-        "RunAsAdministrator": false,
-        "Architecture": "",
-        "InstallationScope": "",
-        "CustomParameters": [],
-        "PreRelease": false,
-        "CustomInstallLocation": "",
-        "Version": ""
-      },
-      "Updates": {
-        "UpdatesIgnored": false,
-        "IgnoredVersion": ""
-      }
-    },
-    {
-      "Id": "Nvidia.GeForceExperience",
-      "Name": "NVIDIA GeForce Experience 3.28.0.412",
-      "Version": "3.28.0.412",
-      "Source": "winget",
-      "ManagerName": "Winget",
-      "InstallationOptions": {
-        "SkipHashCheck": false,
-        "InteractiveInstallation": false,
-        "RunAsAdministrator": false,
-        "Architecture": "",
-        "InstallationScope": "",
-        "CustomParameters": [],
-        "PreRelease": false,
-        "CustomInstallLocation": "",
-        "Version": ""
-      },
-      "Updates": {
-        "UpdatesIgnored": false,
-        "IgnoredVersion": ""
-      }
-    },
-    {
-      "Id": "Nvidia.PhysX",
-      "Name": "NVIDIA PhysX System Software 9.21.0713",
-      "Version": "9.21.0713",
+      "Name": "Notepad\u002B\u002B",
+      "Version": "8.6.8",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -385,7 +407,7 @@
     },
     {
       "Id": "CoreyButler.NVMforWindows",
-      "Name": "NVM for Windows 1.1.12",
+      "Name": "NVM for Windows",
       "Version": "1.1.12",
       "Source": "winget",
       "ManagerName": "Winget",
@@ -408,7 +430,7 @@
     {
       "Id": "Obsidian.Obsidian",
       "Name": "Obsidian",
-      "Version": "1.5.12",
+      "Version": "1.6.5",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -452,9 +474,9 @@
       }
     },
     {
-      "Id": "Postman.Postman",
-      "Name": "Postman",
-      "Version": "11.1.14",
+      "Id": "pnpm.pnpm",
+      "Name": "pnpm",
+      "Version": "9.5.0",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -474,9 +496,9 @@
       }
     },
     {
-      "Id": "Python.Python.3.12",
-      "Name": "Python 3.12.3 (64-bit)",
-      "Version": "3.12.3",
+      "Id": "Postman.Postman",
+      "Name": "Postman",
+      "Version": "11.2.0",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
@@ -585,8 +607,8 @@
     },
     {
       "Id": "Zoom.Zoom",
-      "Name": "Zoom Workplace (64-bit)",
-      "Version": "6.0.39959",
+      "Name": "Zoom Workplace",
+      "Version": "6.1.41705",
       "Source": "winget",
       "ManagerName": "Winget",
       "InstallationOptions": {
