@@ -49,3 +49,14 @@ Login to GitHub.
 ```
 gh auth login
 ```
+
+Download the latest JetBrains toolbox archive from https://www.jetbrains.com/toolbox-app/ then run the setup script.
+```
+./setup-jetbrains.sh
+```
+
+Run JetBrains toolbox and install applications.
+
+```
+jetbrains-toolbox
+```
