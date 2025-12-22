@@ -18,14 +18,17 @@ sudo apt install curl git vim wget zip unzip zsh -y || { show_error "Failed to i
 
 show_info "Installing additional common libraries"
 sudo apt install -y \
+  apt-transport-https \
   build-essential \
   ca-certificates \
+  gnupg \
   libbz2-dev \
   libffi-dev \
   liblzma-dev \
   libreadline-dev \
   libsqlite3-dev \
   libssl-dev \
+  lsb-release \
   tk-dev \
   uuid-dev \
   xz-utils \

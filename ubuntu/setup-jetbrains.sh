@@ -26,4 +26,4 @@ sudo tar -xzf "$TOOLBOX_ARCHIVE_PATH" -C /opt/jetbrains-toolbox --strip-componen
 show_info "Creating symbolic link for jetbrains-toolbox in /usr/local/bin"
 sudo ln -s  /opt/jetbrains-toolbox/bin/jetbrains-toolbox /usr/local/bin/jetbrains-toolbox || { show_error "Failed to create symbolic link for jetbrains-toolbox"; exit 1; }
 
-show_info "JetBrains Toolbox installation completed successfully."
+show_info "JetBrains Toolbox installation completed successfully"
