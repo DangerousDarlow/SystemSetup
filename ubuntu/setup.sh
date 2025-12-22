@@ -9,5 +9,6 @@ source "$SCRIPT_DIR/setup-apt.sh"
 source "$SCRIPT_DIR/setup-github.sh"
 source "$SCRIPT_DIR/setup-asdf.sh"
 source "$SCRIPT_DIR/setup-runtimes.sh"
+source "$SCRIPT_DIR/setup-docker.sh"
 
 show_success "Setup completed successfully"
