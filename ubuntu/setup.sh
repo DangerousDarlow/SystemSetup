@@ -8,5 +8,6 @@ source "$SCRIPT_DIR/common-functions.sh"
 source "$SCRIPT_DIR/setup-apt.sh"
 source "$SCRIPT_DIR/setup-github.sh"
 source "$SCRIPT_DIR/setup-asdf.sh"
+source "$SCRIPT_DIR/setup-runtimes.sh"
 
 show_success "Setup completed successfully"
