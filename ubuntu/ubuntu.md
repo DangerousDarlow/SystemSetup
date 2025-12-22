@@ -17,12 +17,12 @@ Sync floccus with Google Drive.
 
 Update and upgrade apt.
 ```
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 ```
 
 Install essentials.
 ```
-sudo apt install curl git vim wget zsh -y
+sudo apt install git wget zsh -y
 ```
 
 Install `Oh My Zsh`
@@ -30,25 +30,9 @@ Install `Oh My Zsh`
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Change shell to zsh, exit and restart shell.
+Change shell to zsh then exit and restart shell.
 ```
 chsh -s $(which zsh)
-```
-
-Configure Git.
-```
-git config --global user.name "Nick Darlow"
-git config --global user.email "dangerous.darlow@gmail.com" 
-git config --global core.autocrlf input
-```
-
-Install GitHub CLI.
-
-https://github.com/cli/cli/blob/trunk/docs/install_linux.md
-
-Login to GitHub.
-```
-gh auth login
 ```
 
 Clone this repository.
@@ -56,7 +40,12 @@ Clone this repository.
 git clone https://github.com/DangerousDarlow/SystemSetup.git
 ```
 
-Run the setup script.
+Run the setup script then exit and restart shell.
 ```
 ./setup.sh
+```
+
+Login to GitHub.
+```
+gh auth login
 ```
