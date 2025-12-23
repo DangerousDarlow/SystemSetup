@@ -4,7 +4,9 @@ set -euo pipefail
 SCRIPT_DIR="${0:A:h}"
 source "$SCRIPT_DIR/common-functions.sh"
 
-TOOLBOX_ARCHIVES=(~/Downloads/jetbrains-toolbox-*.tar.gz)
+TOOLBOX_PATTERN="$HOME/Downloads/jetbrains-toolbox-*.tar.gz"
+TOOLBOX_ARCHIVES=($~TOOLBOX_PATTERN)
+
 if [[ ${#TOOLBOX_ARCHIVES[@]} -eq 0 ]] || [[ ! -f "${TOOLBOX_ARCHIVES[1]}" ]]; then
 	show_error "No JetBrains Toolbox archive file found matching pattern: ~/Downloads/jetbrains-toolbox-*.tar.gz."
 	show_error "Download from https://www.jetbrains.com/toolbox-app/ and place it in the Downloads folder."
@@ -15,15 +17,31 @@ elif [[ ${#TOOLBOX_ARCHIVES[@]} -gt 1 ]]; then
 fi
 
 TOOLBOX_ARCHIVE_PATH="${TOOLBOX_ARCHIVES[1]}"
-show_info "Found JetBrains Toolbox archive: $TOOLBOX_ARCHIVE_PATH"
+show_info "Found JetBrains Toolbox archive: $(basename "$TOOLBOX_ARCHIVE_PATH")"
 
-show_info "Creating /opt/jetbrains-toolbox directory"
-sudo mkdir -p /opt/jetbrains-toolbox || { show_error "Failed to create /opt/jetbrains-toolbox directory"; exit 1; }
+INSTALL_DIR="/opt/jetbrains-toolbox"
+BIN_LINK="/usr/local/bin/jetbrains-toolbox"
 
-show_info "Extracting JetBrains Toolbox archive to /opt/jetbrains-toolbox"
-sudo tar -xzf "$TOOLBOX_ARCHIVE_PATH" -C /opt/jetbrains-toolbox --strip-components=1 || { show_error "Failed to extract JetBrains Toolbox archive"; exit 1; }
+# Check if already installed
+if [[ -L "$BIN_LINK" ]] && [[ -x "$BIN_LINK" ]]; then
+	show_error "JetBrains Toolbox is already installed at $BIN_LINK"
+	exit 1
+fi
 
-show_info "Creating symbolic link for jetbrains-toolbox in /usr/local/bin"
-sudo ln -s  /opt/jetbrains-toolbox/bin/jetbrains-toolbox /usr/local/bin/jetbrains-toolbox || { show_error "Failed to create symbolic link for jetbrains-toolbox"; exit 1; }
+show_info "Creating installation directory"
+sudo mkdir -p "$INSTALL_DIR" || { show_error "Failed to create $INSTALL_DIR"; exit 1; }
 
-show_info "JetBrains Toolbox installation completed successfully"
+show_info "Extracting archive"
+sudo tar -xzf "$TOOLBOX_ARCHIVE_PATH" -C "$INSTALL_DIR" --strip-components=1 || { 
+	show_error "Failed to extract archive"
+	sudo rm -rf "$INSTALL_DIR"
+	exit 1
+}
+
+show_info "Creating symbolic link"
+sudo ln -sf "$INSTALL_DIR/jetbrains-toolbox" "$BIN_LINK" || { 
+	show_error "Failed to create symbolic link"
+	exit 1
+}
+
+show_success "JetBrains Toolbox installation completed successfully"

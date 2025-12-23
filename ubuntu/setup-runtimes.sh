@@ -4,31 +4,47 @@ set -euo pipefail
 SCRIPT_DIR="${0:A:h}"
 source "$SCRIPT_DIR/common-functions.sh"
 
-show_info "Adding adsf plugin for nodejs"
-asdf plugin add nodejs || { show_error "Failed to add asdf plugin for nodejs"; exit 1; }
+# Verify asdf is available
+if ! command -v asdf &> /dev/null; then
+	show_error "asdf is not available. Please run setup-asdf.sh first"
+	exit 1
+fi
 
-show_info "Installing nodejs"
-asdf install nodejs latest || { show_error "Failed to install nodejs"; exit 1; }
+# Runtimes to install
+declare -A RUNTIMES=(
+	[nodejs]="Node.js"
+	[dotnet]=".NET"
+	[python]="Python"
+)
 
-show_info "Setting global nodejs version"
-asdf set -u nodejs latest || { show_error "Failed to set global nodejs version"; exit 1; }
+for runtime plugin_name in ${(kv)RUNTIMES}; do
+	show_info "Setting up $plugin_name"
+	
+	# Add plugin if not already added
+	if ! asdf plugin list | grep -q "^${runtime}\$"; then
+		show_info "Adding asdf plugin for $runtime"
+		asdf plugin add "$runtime" || { 
+			show_error "Failed to add asdf plugin for $runtime"
+			exit 1
+		}
+	else
+		show_info "Plugin for $runtime already added"
+	fi
+	
+	show_info "Installing $plugin_name latest version"
+	asdf install "$runtime" latest || { 
+		show_error "Failed to install $runtime"
+		exit 1
+	}
+	
+	show_info "Setting global $runtime version"
+	asdf set -u "$runtime" latest || { 
+		show_error "Failed to set global $runtime version"
+		exit 1
+	}
+	
+	show_success "$plugin_name installed successfully"
+	echo ""
+done
 
-show_info "Adding asdf plugin for dotnet"
-asdf plugin add dotnet || { show_error "Failed to add asdf plugin for dotnet"; exit 1; }
-
-show_info "Installing dotnet"
-asdf install dotnet latest || { show_error "Failed to install dotnet"; exit 1; }
-
-show_info "Setting global dotnet version"
-asdf set -u dotnet latest || { show_error "Failed to set global dotnet version"; exit 1; }
-
-show_info "Adding asdf plugin for python"
-asdf plugin add python || { show_error "Failed to add asdf plugin for python"; exit 1; }
-
-show_info "Installing python"
-asdf install python latest || { show_error "Failed to install python"; exit 1; }
-
-show_info "Setting global python version"
-asdf set -u python latest || { show_error "Failed to set global python version"; exit 1; }
-
-show_success "Runtimes setup completed successfully"
+show_success "All runtimes installed successfully"
