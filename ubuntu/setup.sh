@@ -15,6 +15,7 @@ SETUP_SCRIPTS=(
 	"setup-runtimes.sh"
 	"setup-docker.sh"
 	"setup-azure.sh"
+	"setup-insync.sh"
 	"setup-snap.sh"
 )
 
