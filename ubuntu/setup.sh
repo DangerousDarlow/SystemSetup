@@ -13,6 +13,7 @@ SETUP_SCRIPTS=(
 	"setup-github.sh"
 	"setup-asdf.sh"
 	"setup-runtimes.sh"
+	"setup-corepack.sh"
 	"setup-docker.sh"
 	"setup-azure.sh"
 	"setup-insync.sh"
