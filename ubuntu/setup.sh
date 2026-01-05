@@ -15,6 +15,7 @@ SETUP_SCRIPTS=(
 	"setup-runtimes.sh"
 	"setup-docker.sh"
 	"setup-azure.sh"
+	"setup-snap.sh"
 )
 
 for script in "${SETUP_SCRIPTS[@]}"; do
