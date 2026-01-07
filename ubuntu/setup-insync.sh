@@ -46,6 +46,9 @@ EOF
 	exit 1
 fi
 
+show_info "Removing old Insync repository list file"
+sudo rm -f /etc/apt/sources.list.d/insync.list
+
 show_info "Updating package list"
 sudo apt update || { show_error "Failed to update apt"; exit 1; }
 
