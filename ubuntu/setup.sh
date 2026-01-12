@@ -9,7 +9,8 @@ source "$SCRIPT_DIR/common-functions.sh"
 
 # Setup scripts to run
 SETUP_SCRIPTS=(
-	"setup-apt.sh"
+	"apt.sh"
+	"keys.sh"
 	"setup-github.sh"
 	"setup-asdf.sh"
 	"setup-runtimes.sh"

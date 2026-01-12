@@ -18,21 +18,6 @@ if command -v az &> /dev/null; then
 	$IS_TOP_LEVEL && exit 0 || return 0
 fi
 
-show_info "Installing Microsoft GPG key"
-sudo mkdir -p /etc/apt/keyrings || { show_error "Failed to create keyrings directory"; exit 1; }
-
-curl -sLS https://packages.microsoft.com/keys/microsoft.asc | \
-	gpg --dearmor | \
-	sudo tee /etc/apt/keyrings/microsoft.gpg > /dev/null || {
-	show_error "Failed to download and install Microsoft GPG key"
-	exit 1
-}
-
-sudo chmod go+r /etc/apt/keyrings/microsoft.gpg || { 
-	show_error "Failed to set permissions on GPG key"
-	exit 1
-}
-
 show_info "Adding Azure CLI repository to sources"
 if ! sudo tee /etc/apt/sources.list.d/azure-cli.sources > /dev/null <<EOF; then
 Types: deb

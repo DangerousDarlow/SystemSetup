@@ -18,21 +18,6 @@ if command -v insync &> /dev/null; then
 	$IS_TOP_LEVEL && exit 0 || return 0
 fi
 
-show_info "Installing Insync GPG key"
-sudo mkdir -p /etc/apt/keyrings || { show_error "Failed to create keyrings directory"; exit 1; }
-
-curl -sLS https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key | \
-	gpg --dearmor | \
-	sudo tee /etc/apt/keyrings/insync.gpg > /dev/null || {
-	show_error "Failed to download and install Insync GPG key"
-	exit 1
-}
-
-sudo chmod go+r /etc/apt/keyrings/insync.gpg || { 
-	show_error "Failed to set permissions on GPG key"
-	exit 1
-}
-
 show_info "Adding Insync repository to sources"
 if ! sudo tee /etc/apt/sources.list.d/insync.sources > /dev/null <<EOF; then
 Types: deb
