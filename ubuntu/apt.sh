@@ -15,6 +15,7 @@ sudo apt autoremove -y || { show_error "Failed to remove unnecessary apt package
 
 show_info "Installing common apt packages"
 sudo apt install -y \
+  aptitude \
   apt-transport-https \
   build-essential \
   ca-certificates \

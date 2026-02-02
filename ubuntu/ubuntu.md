@@ -60,3 +60,29 @@ Run JetBrains toolbox and install applications.
 ```
 jetbrains-toolbox
 ```
+
+## Microsoft
+
+The Azure Functions Core Tools package comes from apt source `https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod`. The (instructions)[ https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp#create-your-local-project] for adding this source don't work because the key does not match the repository.
+
+```
+Err:9 https://packages.microsoft.com/repos/microsoft-ubuntu-questing-prod questing InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY EE4D7792F748182B
+```
+
+To resolve this download the specific key from `keyserver.ubuntu.com`.
+
+```
+mkdir tmp-key
+gpg --homedir "tmp-key" --keyserver keyserver.ubuntu.com --recv-keys EE4D7792F748182B
+gpg --homedir "tmp-key" --export EE4D7792F748182B | gpg --dearmor -o /etc/apt/keyrings/microsoft-dev.gpg
+sudo install -D -o root -g root -m 644 tmp-key/microsoft-dev.gpg /etc/apt/keyrings/microsoft-dev.gpg
+```
+
+The `questing` repository `https://packages.microsoft.com/repos/microsoft-ubuntu-questing-prod` does not contain `azure-functions-core-tools-4` so both `questing` and `noble` repositories are added as sources.
+
+```
+$ cat /etc/apt/sources.list.d/microsoft-dev.list 
+deb [arch=amd64 signed-by=/etc/apt/keyrings/microsoft-dev.gpg] https://packages.microsoft.com/repos/microsoft-ubuntu-questing-prod questing main
+deb [arch=amd64 signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/microsoft-ubuntu-noble-prod noble main
+```
