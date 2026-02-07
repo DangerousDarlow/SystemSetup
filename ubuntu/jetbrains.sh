@@ -39,7 +39,7 @@ sudo tar -xzf "$TOOLBOX_ARCHIVE_PATH" -C "$INSTALL_DIR" --strip-components=1 || 
 }
 
 show_info "Creating symbolic link"
-sudo ln -sf "$INSTALL_DIR/jetbrains-toolbox" "$BIN_LINK" || { 
+sudo ln -sf "$INSTALL_DIR/bin/jetbrains-toolbox" "$BIN_LINK" || { 
 	show_error "Failed to create symbolic link"
 	exit 1
 }

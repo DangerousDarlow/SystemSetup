@@ -18,18 +18,6 @@ if command -v docker &> /dev/null; then
 	$IS_TOP_LEVEL && exit 0 || return 0
 fi
 
-show_info "Adding Docker repository to sources"
-sudo tee /etc/apt/sources.list.d/docker.sources <<EOF > /dev/null || { show_error "Failed to add Docker repository"; exit 1; }
-Types: deb
-URIs: https://download.docker.com/linux/ubuntu
-Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
-Components: stable
-Signed-By: /etc/apt/keyrings/docker.gpg
-EOF
-
-show_info "Updating package list"
-sudo apt update || { show_error "Failed to update apt"; exit 1; }
-
 show_info "Installing Docker packages"
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin || {
 	show_error "Failed to install Docker packages"

@@ -18,22 +18,6 @@ if command -v az &> /dev/null; then
 	$IS_TOP_LEVEL && exit 0 || return 0
 fi
 
-show_info "Adding Azure CLI repository to sources"
-if ! sudo tee /etc/apt/sources.list.d/azure-cli.sources > /dev/null <<EOF; then
-Types: deb
-URIs: https://packages.microsoft.com/repos/azure-cli/
-Suites: noble
-Components: main
-Architectures: $(dpkg --print-architecture)
-Signed-by: /etc/apt/keyrings/microsoft.gpg
-EOF
-	show_error "Failed to add Azure CLI repository"
-	exit 1
-fi
-
-show_info "Updating package list"
-sudo apt update || { show_error "Failed to update apt"; exit 1; }
-
 show_info "Installing Azure CLI"
 sudo apt install -y azure-cli || { 
 	show_error "Failed to install Azure CLI"

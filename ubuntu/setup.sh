@@ -11,14 +11,14 @@ source "$SCRIPT_DIR/common-functions.sh"
 SETUP_SCRIPTS=(
 	"apt.sh"
 	"keys.sh"
-	"setup-github.sh"
-	"setup-asdf.sh"
-	"setup-runtimes.sh"
-	"setup-corepack.sh"
-	"setup-docker.sh"
-	"setup-azure.sh"
-	"setup-insync.sh"
-	"setup-snap.sh"
+	"sources.sh"
+	"github.sh"
+	"node.sh"
+	"dotnet.sh"
+	"docker.sh"
+	"azure.sh"
+	"insync.sh"
+	"flatpak.sh"
 )
 
 for script in "${SETUP_SCRIPTS[@]}"; do

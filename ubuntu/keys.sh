@@ -57,7 +57,7 @@ KEYS=(
         "https://packages.microsoft.com/keys/microsoft.asc microsoft.gpg"
         "https://download.docker.com/linux/ubuntu/gpg docker.gpg"
         "https://apt.insync.io/insynchq.gpg insync.gpg"
-        "https://cli.github.com/packages/githubcli-archive-keyring.gpg githubcli-archive-keyring.gpg false"
+        "https://cli.github.com/packages/githubcli-archive-keyring.gpg github-cli.gpg false"
 )
 
 for key in "${KEYS[@]}"; do

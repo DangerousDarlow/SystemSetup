@@ -18,25 +18,6 @@ if command -v insync &> /dev/null; then
 	$IS_TOP_LEVEL && exit 0 || return 0
 fi
 
-show_info "Adding Insync repository to sources"
-if ! sudo tee /etc/apt/sources.list.d/insync.sources > /dev/null <<EOF; then
-Types: deb
-URIs: https://apt.insync.io/ubuntu
-Suites: $(lsb_release -cs)
-Components: non-free contrib
-Architectures: $(dpkg --print-architecture)
-Signed-by: /etc/apt/keyrings/insync.gpg
-EOF
-	show_error "Failed to add Insync repository"
-	exit 1
-fi
-
-show_info "Removing old Insync repository list file"
-sudo rm -f /etc/apt/sources.list.d/insync.list
-
-show_info "Updating package list"
-sudo apt update || { show_error "Failed to update apt"; exit 1; }
-
 show_info "Installing Insync"
 sudo apt install -y insync || { 
 	show_error "Failed to install Insync"
