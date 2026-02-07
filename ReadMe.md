@@ -2,5 +2,5 @@
 
 Instructions for operating system
 
-- [Ubuntu](ubuntu/ubuntu.md)
+- [Linux Mint](linux_mint/Linux%20Mint.md)
 - [Windows](windows/Windows.md)

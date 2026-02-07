@@ -1,4 +1,4 @@
-# Ubuntu System Setup
+# Linux Mint System Setup
 
 ## Firefox
 
