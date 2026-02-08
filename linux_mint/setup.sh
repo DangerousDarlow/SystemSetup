@@ -19,6 +19,7 @@ SETUP_SCRIPTS=(
 	"azure.sh"
 	"insync.sh"
 	"flatpak.sh"
+	"microsoft.sh"
 )
 
 for script in "${SETUP_SCRIPTS[@]}"; do
