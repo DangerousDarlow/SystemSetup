@@ -1,5 +1,3 @@
-# Linux Mint System Setup
-
 ## Firefox
 
 Install `Proton Pass` extension & disable browser password manager.
