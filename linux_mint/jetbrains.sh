@@ -19,28 +19,14 @@ fi
 TOOLBOX_ARCHIVE_PATH="${TOOLBOX_ARCHIVES[1]}"
 show_info "Found JetBrains Toolbox archive: $(basename "$TOOLBOX_ARCHIVE_PATH")"
 
-INSTALL_DIR="/opt/jetbrains-toolbox"
-BIN_LINK="/usr/local/bin/jetbrains-toolbox"
+INSTALL_DIR="$HOME/.jetbrains-toolbox"
 
-# Check if already installed
-if [[ -L "$BIN_LINK" ]] && [[ -x "$BIN_LINK" ]]; then
-	show_error "JetBrains Toolbox is already installed at $BIN_LINK"
-	exit 1
-fi
-
-show_info "Creating installation directory"
-sudo mkdir -p "$INSTALL_DIR" || { show_error "Failed to create $INSTALL_DIR"; exit 1; }
+show_info "Creating installation directory $INSTALL_DIR"
+mkdir -p "$INSTALL_DIR" || { show_error "Failed to create $INSTALL_DIR"; exit 1; }
 
 show_info "Extracting archive"
-sudo tar -xzf "$TOOLBOX_ARCHIVE_PATH" -C "$INSTALL_DIR" --strip-components=1 || { 
+tar -xzf "$TOOLBOX_ARCHIVE_PATH" -C "$INSTALL_DIR" --strip-components=1 || { 
 	show_error "Failed to extract archive"
-	sudo rm -rf "$INSTALL_DIR"
-	exit 1
-}
-
-show_info "Creating symbolic link"
-sudo ln -sf "$INSTALL_DIR/bin/jetbrains-toolbox" "$BIN_LINK" || { 
-	show_error "Failed to create symbolic link"
 	exit 1
 }
 
