@@ -22,7 +22,9 @@ sudo apt install -y \
   curl \
   git \
   gnupg \
+  jq \
   lsb-release \
+  ripgrep \
   unzip \
   vim \
   wget \
