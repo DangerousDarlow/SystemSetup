@@ -1,5 +1,3 @@
-Windows personal / gaming PC setup and configuration.
-
 Install WSL
 >`wsl --install`
 
