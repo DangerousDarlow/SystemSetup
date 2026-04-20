@@ -58,6 +58,7 @@ KEYS=(
         "https://download.docker.com/linux/ubuntu/gpg docker.gpg"
         "https://apt.insync.io/insynchq.gpg insync.gpg"
         "https://cli.github.com/packages/githubcli-archive-keyring.gpg github-cli.gpg false"
+        "https://www.naps2.com/naps2-public.pgp naps2.gpg"
 )
 
 for key in "${KEYS[@]}"; do

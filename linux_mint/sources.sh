@@ -73,6 +73,17 @@ EOF
 	exit 1
 fi
 
+show_info "Adding NAPS2 source"
+if ! sudo tee /etc/apt/sources.list.d/naps2.sources > /dev/null <<EOF; then
+Types: deb
+URIs: https://downloads.naps2.com
+Suites: ./
+Signed-by: /etc/apt/keyrings/naps2.gpg
+EOF
+	show_error "Failed to add NAPS2 source"
+	exit 1
+fi
+
 sudo apt update
 
 show_success "Sources added successfully"
