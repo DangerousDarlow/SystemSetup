@@ -1,7 +1,5 @@
-# System Setup
+This repository details how I setup my personal development machine(s). I have used Windows, Linux and Mac devices and tried to get a similar setup in all cases. Mac is the most up to date as it is my current primary device.
 
-Instructions for operating system
-
+- [Mac](Mac.md)
 - [Linux Mint](linux_mint/Linux%20Mint.md)
-- [Mac](mac/Mac.md)
 - [Windows](windows/Windows.md)
