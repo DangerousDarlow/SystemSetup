@@ -141,6 +141,7 @@ corepack prepare pnpm@latest --activate
 Needed for DotNet application development.
 ```
 brew install --cask dotnet-sdk
+brew install --cask dotnet-sdk@9
 ```
 
 
