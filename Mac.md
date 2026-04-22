@@ -5,20 +5,21 @@ Mac is easier to configure than Linux. I felt a list was sufficient and a script
 1. Homebrew
 2. Oh My Zsh
 3. Proton Pass
-4. Raindrop.io
-5. Chrome
-6. Obsidian
-7. Insync
-8. GitHub CLI
-9. Git configuration
-10. Visual Studio Code
-11. Node Version Manager
-12. DotNet SDK
-13. JetBrains Toolbox
-14. Docker
-15. Azure CLI
-16. Azure Functions CLI
-17. Adobe Creative Cloud
+4. Proton Mail
+5. Raindrop.io
+6. Chrome
+7. Obsidian
+8. Insync
+9. GitHub CLI
+10. Git configuration
+11. Visual Studio Code
+12. Node Version Manager
+13. DotNet SDK
+14. JetBrains Toolbox
+15. Docker
+16. Azure CLI
+17. Azure Functions CLI
+18. Adobe Creative Cloud
 
 ## [Homebrew](https://docs.brew.sh/Installation)
 
@@ -41,6 +42,12 @@ Password manager.
 brew install --cask proton-pass
 ```
 
+## [Proton Mail](https://proton.me/mail)
+
+Private email.
+```
+brew install --cask proton-mail
+```
 ## [Raindrop.io](https://raindrop.io/download)
 
 Bookmark management. Necessary to use the same bookmarks across browsers and devices.
