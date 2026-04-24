@@ -20,6 +20,8 @@ Mac is easier to configure than Linux. I felt a list was sufficient and a script
 16. Azure CLI
 17. Azure Functions CLI
 18. Adobe Creative Cloud
+19. Claude Code
+20. ripgrep
 
 ## [Homebrew](https://docs.brew.sh/Installation)
 
@@ -194,4 +196,18 @@ brew install azure-functions-core-tools@4
 Photo editing tools Lightroom Classic and Photoshop.
 ```
 brew install --cask adobe-creative-cloud
+```
+
+## [Claude Code](https://code.claude.com/docs/en/overview)
+
+Command line Claude AI tool.
+```
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+## ripgrep
+
+Fast command-line search tool for searching text within files. Frequently used by AI tooling.
+```
+brew install ripgrep
 ```
