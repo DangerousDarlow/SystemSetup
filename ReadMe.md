@@ -2,3 +2,4 @@ This repository details how I setup my personal development machine(s). I have u
 
 - [Mac](Mac.md)
 - [Linux Mint](linux_mint/Linux%20Mint.md)
+- [Windows](Windows.md)
