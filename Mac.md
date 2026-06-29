@@ -22,6 +22,7 @@ Mac is easier to configure than Linux. I felt a list was sufficient and a script
 18. Adobe Creative Cloud
 19. Claude Code
 20. ripgrep
+21. toxiproxy cli
 
 ## [Homebrew](https://docs.brew.sh/Installation)
 
